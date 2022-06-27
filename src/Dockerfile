@@ -1,7 +1,7 @@
-FROM python:3.8-alpine
-RUN apk add --no-cache git
-RUN apk add --no-cache curl
-RUN apk add --no-cache openssh
+FROM python:3.9
+
+RUN apt-get update
+RUN pip install --no-cache pandas
 
 ADD ./id_ed25519 /root/.ssh/id_ed25519
 ADD . /src

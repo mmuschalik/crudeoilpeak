@@ -1,4 +1,4 @@
-FROM alpine
+FROM python:3.8-alpine
 RUN apk add --no-cache git
 RUN apk add --no-cache curl
 RUN apk add --no-cache openssh

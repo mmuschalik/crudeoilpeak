@@ -3,7 +3,7 @@ cd crudeoilpeak
 mkdir -p data
 cd data
 
-LATEST=$(ls -tp nsw*.csv | grep -v /$ | head -1)
+LATEST=$(ls -1 nsw_202*.csv | sort -r | grep -v /$ | head -1)
 CURRENT=nsw
 
 curl http://nemlog.com.au/api/stns/nsw/csv >> $CURRENT

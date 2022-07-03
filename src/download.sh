@@ -7,6 +7,9 @@ cd data
 
 ../src/download_state.sh nsw
 ../src/download_state.sh qld
+../src/download_state.sh sa
+../src/download_state.sh tas
+../src/download_state.sh vic
 
 git add --all
 git commit -a -m "new run..."

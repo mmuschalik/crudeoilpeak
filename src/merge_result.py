@@ -14,8 +14,8 @@ ts = pd.to_datetime(df3.index, format='%Y-%m-%d %H:%M:%S').strftime('%Y-%W')
 for i, x in df3.groupby(ts):
    x.to_csv('{}_{}.csv'.format(state, i), index=True)
 
-df3['WF'] = df3.filter(regex='WF').sum(axis=1)
-df3['DATE'] = pd.to_datetime(df3.index, format='%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d %a')
-df4 = df3.groupby('DATE')["WF"].sum().to_frame().rename(columns={"WF": state})
-df4.to_csv('wf_{}.csv'.format(state), index=True)
+#df3['WF'] = df3.filter(regex='WF').sum(axis=1)
+#df3['DATE'] = pd.to_datetime(df3.index, format='%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d %a')
+#df4 = df3.groupby('DATE')["WF"].sum().to_frame().rename(columns={"WF": state})
+#df4.to_csv('wf_{}.csv'.format(state), index=True)
 
